@@ -14,9 +14,9 @@ const Trail = (props) => {
         <ButtonWrap name="Demo" hideText={false} background={colors.secondary} color={colors.black}/>
         <ButtonWrap name="Text" hideText={true} background={colors.primary} />
     </div> */}
-    {/* <Practice/> */}
+    <Practice/>
     <div>
-      <Rout/>
+      {/* <Rout/> */}
     {/* <UseEffect/> */}
     </div>
     <div>
