@@ -7,6 +7,8 @@ import UseEffect from '../components/useEffect';
 import Rout from '../components/Router';
 import Ant from '../components/AntD';
 import Practice from '../components/classComponent';
+import Toastify from '../components/Toastify';
+import SearchTable from '../components/Search';
 const Trail = (props) => {
   return (
     <>
@@ -14,7 +16,8 @@ const Trail = (props) => {
         <ButtonWrap name="Demo" hideText={false} background={colors.secondary} color={colors.black}/>
         <ButtonWrap name="Text" hideText={true} background={colors.primary} />
     </div> */}
-    <Practice/>
+    {/* <Practice/>
+    <Toastify/> */}
     <div>
       {/* <Rout/> */}
     {/* <UseEffect/> */}
@@ -24,6 +27,7 @@ const Trail = (props) => {
       {/* <Material/> */}
     </div>
     {/* <Ant/> */}
+    <SearchTable/>
     </>
   );
 }

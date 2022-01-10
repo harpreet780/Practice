@@ -2,3 +2,44 @@
   text-align: center;
 }
 
+.seachWrap {
+  width: 60%;
+  margin: auto;
+}
+
+.search-table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 25px;
+}
+
+.searchInput {
+  height: 40px;
+  width: 550px;
+  border-radius: 8px;
+  padding: 0px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #797979;
+  outline: none;
+}
+.searchInput:focus{
+  border:2px solid #55c0ff;
+}
+.search-table th{
+  font-size: 18px;
+  font-weight: 700;
+  text-align: start;
+  padding: 10px;
+  border: 1px solid #797979;
+}
+.search-table td{
+  text-align: start;
+  padding: 10px;
+  border: 1px solid #797979;
+}
+.pagination{
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}

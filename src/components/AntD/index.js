@@ -1,6 +1,5 @@
 import React from 'react';
 import { Menu, Steps, Carousel } from "antd";
-import "antd/dist/antd.css";
 import { MailOutlined } from '@ant-design/icons';
 
 const Ant = () => {
