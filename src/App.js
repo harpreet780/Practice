@@ -4,10 +4,12 @@ import Trail from './pages/trails';
 import { increaseCounter, decreaseCounter } from './redux/Counter/counter.actions'
 import { connect } from 'react-redux';
 import "antd/dist/antd.css";
+import Jar from './components/filledJar';
 function App(props) {
   return (
     <div style={{ padding: 30}}>
-      <Trail/>
+      {/* <Trail/> */}
+      <Jar/>
       {/* <div>
         <button onClick={() => props.increaseCounter()}>Increase Count</button>
             <span style={{margin:'0px 8px'}}>Count: {props.count}</span>

@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -22,6 +19,7 @@ import Popover from '@material-ui/core/Popover';
 import Link from '@material-ui/core/Link';
 import HomeIcon from '@material-ui/icons/Home';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
+
 // import { FormatListNumberedRtlOutlined } from '@material-ui/icons';
 const Material = ({ name, email, password }) => {
     const useStyles = makeStyles((theme) => ({
@@ -32,16 +30,6 @@ const Material = ({ name, email, password }) => {
         InputWrap: {
             width: '100%',
             margin: '20px 0px',
-        },
-        SelectWrap: {
-            width: '100%',
-            margin: theme.spacing(1),
-        },
-        Select: {
-            width: '100%',
-        },
-        Wrapper: {
-            display: 'flex',
         },
         checkbox: {
             padding: '10px',
@@ -139,7 +127,7 @@ const Material = ({ name, email, password }) => {
     const [isMale, setIsMale] = React.useState(undefined);
     const [isDone, setDone] = React.useState();
     const onhandlebutton = () => {
-        setDone(!isDone)
+        setDone(!isDone);
     }
     const [isCount, setCount] = useState(0);
     useEffect(() => {
@@ -208,50 +196,6 @@ const Material = ({ name, email, password }) => {
                     color="secondary"
                     placeholder="this is a web page" >
                 </Input>
-                <div className={classes.Wrapper} ref={text}>
-                    <Grid item={8} className={classes.SelectWrap}>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            color="secondary"
-                            value={age}
-                            onChange={handleChange}
-                            className={classes.Select}
-                        >
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item={4} className={classes.SelectWrap}>
-                        <Select
-                            labelId="demo-simple-select-outlined-label"
-                            id="demo-simple-select-outlined"
-                            value={number}
-                            onChange={handleChange}
-                            label="Number"
-                            color="secondary"
-                            className={classes.Select}
-                        >
-                            <MenuItem value={18}>18+</MenuItem>
-                            <MenuItem value={40}>40+</MenuItem>
-                            <MenuItem value={60}>60+</MenuItem>
-                        </Select>
-                    </Grid>
-                    <Grid item={4} className={classes.SelectWrap}>
-                        <Select
-                            id="demo-simple-select"
-                            value={old}
-                            onChange={handleChange}
-                            label="Old"
-                            color="secondary"
-                            className={classes.Select}
-                        >
-                            <MenuItem value={1}>old</MenuItem>
-                            <MenuItem value={2}>much</MenuItem>
-                        </Select>
-                    </Grid>
-                </div>
                 <Tooltip title="open" placement="bottom">
                     <Button variant="contained" className={classes.Btn} 
                     onClick={onhandlebutton}>

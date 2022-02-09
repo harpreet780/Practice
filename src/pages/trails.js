@@ -9,6 +9,7 @@ import Ant from '../components/AntD';
 import Practice from '../components/classComponent';
 import Toastify from '../components/Toastify';
 import SearchTable from '../components/Search';
+import MaterialTheme from '../components/Theme_Material/MaterialTheme';
 const Trail = (props) => {
   return (
     <>
@@ -25,9 +26,10 @@ const Trail = (props) => {
     <div>
       {/* <TableBox/> */}
       {/* <Material/> */}
+      <MaterialTheme/>
     </div>
     {/* <Ant/> */}
-    <SearchTable/>
+    {/* <SearchTable/> */}
     </>
   );
 }
