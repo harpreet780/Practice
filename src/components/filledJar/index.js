@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./style.css";
 const Jar = () => {
-    const data=[
+    const data = [
         {
             category: "$"
         },
@@ -9,6 +9,7 @@ const Jar = () => {
             category: "$"
         },
         {
+
             category: "$"
         },
         {
@@ -19,22 +20,34 @@ const Jar = () => {
     const Hanldedate = (e) => {
         setSelected(e.target.value);
     }
-    const [count, setCount] = useState();
     console.log(selected, "selected");
-
+    const jarHeight = '400px';
+    const jarwidth = '400px';
     return (
         <div className="jarWrapper">
-      <p className="perText">
+            <p className="perText">
                 {selected >= 100 ? '100%' :
-                `${selected}%`}
-                </p>
+                    `${selected}%`}
+            </p>
             <div className="filledJar">
-                <img src="./images/jar.svg" alt="jar" className="jarImg" />
+                <img
+                    style={{ width: jarwidth, height: jarHeight }}
+                    src="./images/jar.svg"
+                    alt="jar"
+                    className="jarImg" />
                 <div className="priceData">
-                    {data?.map((item)=> {
-                        return(
-                         <span className='price'>{item.category}</span>
-                   ) })}
+                    {data?.map((item) => {
+                        return (
+                            <>
+                                <span
+                                    className='price'
+                                    style={{}}
+                                >
+                                    {item.category}
+                                </span>
+                            </>
+                        )
+                    })}
                 </div>
             </div>
             <input
@@ -44,7 +57,7 @@ const Jar = () => {
                 placeholder="Enter amount"
                 value={selected >= 100 ? 100 : selected}
                 onChange={(e) => Hanldedate(e)}
-                />
+            />
         </div>
     );
 };
