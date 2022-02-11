@@ -18,11 +18,14 @@ const Jar = () => {
     ]
     const [selected, setSelected] = useState(0);
     const Hanldedate = (e) => {
-        setSelected(e.target.value);
+        setSelected((Number(e?.target?.value)));
     }
     console.log(selected, "selected");
-    const jarHeight = '400px';
-    const jarwidth = '400px';
+    const jarHeight = 400;
+    const jarwidth = 400;
+    const num = 10;
+    const spanHeight = jarHeight / num
+    const spanWidth = jarwidth / num
     return (
         <div className="jarWrapper">
             <p className="perText">
@@ -31,23 +34,26 @@ const Jar = () => {
             </p>
             <div className="filledJar">
                 <img
-                    style={{ width: jarwidth, height: jarHeight }}
-                    src="./images/jar.svg"
+                    style={{ width: `${jarwidth}px`, height: `${jarHeight}px` }}
+                    src="./images/empty-jar.svg"
                     alt="jar"
                     className="jarImg" />
                 <div className="priceData">
-                    {data?.map((item) => {
-                        return (
-                            <>
-                                <span
-                                    className='price'
-                                    style={{}}
-                                >
-                                    {item.category}
-                                </span>
-                            </>
-                        )
-                    })}
+                    {selected ?
+                        <>
+                            {Array(selected)?.fill(null)?.map(() => {
+                                return (
+                                        <span
+                                            className='price'
+                                            style={{ width:`${spanWidth}px`, height: `${spanHeight}px` }}
+                                        >
+                                            $
+                                        </span>
+                                )
+                            })}
+                        </>
+                        : null
+                    }
                 </div>
             </div>
             <input
